@@ -1,0 +1,14 @@
+<h1>Ajouter un nouveau signet à <%= @list.name %></h1>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <div>
+    <%= f.label :movie_id %>
+    <%= f.association :movie, collection: Movie.all, label_method: :title, value_method: :id, include_blank: true %>
+  </div>
+  <div>
+    <%= f.label :comment %>
+    <%= f.text_field :comment %>
+  </div>
+  <div>
+    <%= f.submit "Ajouter le signet" %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Détails de la liste :</h1>
+<h2><%= @list.name %></h2>
+
+
+<h2>Signets :</h2>
+<%= @list.bookmarks %>
+<%= link_to "Ajouter un signet", new_list_bookmark_path(@list) %>
+<%= link_to "Retour à la liste des listes", lists_path %>
